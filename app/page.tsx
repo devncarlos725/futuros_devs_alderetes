@@ -226,9 +226,23 @@ export default function Home() {
             }}>
               <div style={{
                 width: 44, height: 44, borderRadius: 8, background: '#fff',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                overflow: 'hidden', flexShrink: 0,
               }}>
-                🏛️
+                <img
+                  src="/logo-alderetes.jpg?v=1"
+                  alt="Municipalidad de Alderetes"
+                  width={44}
+                  height={44}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    display: 'block',
+                    opacity: 1,
+                  }}
+                />
               </div>
               <div style={{ textAlign: 'left' }}>
                 <div style={{ fontFamily: "'Space Mono'", fontSize: 10, color: '#6b7280', letterSpacing: '.1em', marginBottom: 2 }}>
@@ -649,9 +663,22 @@ export default function Home() {
                   <div style={{
                     width: '100%', height: '100%', borderRadius: '50%',
                     background: 'var(--card)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 40,
+                    overflow: 'hidden',
                   }}>
-                    👨‍💻
+                    <img
+                      src="/carlos-nunez.jpg?v=1"
+                      alt="Carlos M. Núñez"
+                      width={94}
+                      height={94}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center top',
+                        display: 'block',
+                        opacity: 1,
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -683,7 +710,7 @@ export default function Home() {
                      onMouseOut={e =>  (e.currentTarget.style.background = 'var(--orange)')}>
                     🔗 Ver Portfolio Online
                   </a>
-                  <a href="https://linkedin.com/in/carlos-nunez" target="_blank"
+                  <a href="https://www.linkedin.com/in/carlos-nu%C3%B1ez-ba7066145/" target="_blank"
                      style={{
                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
                        padding: '12px 20px', borderRadius: 12, border: '1px solid var(--cyan)',

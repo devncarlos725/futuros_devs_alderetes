@@ -1,8 +1,14 @@
 import { supabase } from "@/lib/supabase";
 import { Resend } from "resend";
 
-// Inicializamos Resend con la API key del .env.local
-const resend = new Resend(process.env.RESEND_API_KEY);
+const RESEND_API_KEY = process.env.RESEND_API_KEY || "re_12345";
+const RESEND_FROM_EMAIL =
+  process.env.RESEND_FROM_EMAIL || "Futuros Devs Alderetes <onboarding@resend.dev>";
+const ADMIN_NOTIFICATION_EMAIL =
+  process.env.ADMIN_NOTIFICATION_EMAIL || "devncarlos725@gmail.com";
+
+// Inicializamos Resend con fallback para evitar fallos en build.
+const resend = new Resend(RESEND_API_KEY);
 
 export async function POST(request) {
   try {
@@ -33,7 +39,7 @@ export async function POST(request) {
 
     // ── 3. MAIL AL ALUMNO — confirmación de inscripción ────────────────────────
     await resend.emails.send({
-      from: "Futuros Devs Alderetes <onboarding@resend.dev>",
+      from: RESEND_FROM_EMAIL,
       to: email,
       subject: "🚀 ¡Tu inscripción fue recibida! — Futuros Devs Alderetes",
       html: `
@@ -79,8 +85,8 @@ export async function POST(request) {
 
     // ── 4. MAIL AL PROFE — aviso de nueva inscripción ──────────────────────────
     await resend.emails.send({
-      from: "Futuros Devs Alderetes <onboarding@resend.dev>",
-      to: "devncarlos725@gmail.com", // ← cambiá por tu email real
+      from: RESEND_FROM_EMAIL,
+      to: ADMIN_NOTIFICATION_EMAIL,
       subject: `🔔 Nueva inscripción: ${nombre}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">

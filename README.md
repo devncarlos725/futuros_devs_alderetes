@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Futuros Devs Alderetes - Plataforma de Formación Tecnológica
 
-## Getting Started
+![Stack](https://img.shields.io/badge/Stack-Next.js%2015%20%7C%20TS%20%7C%20Tailwind-blue)
+![Status](https://img.shields.io/badge/Estado-Producción-success)
 
-First, run the development server:
+Este proyecto es una Landing Page de alta conversión y sistema de gestión para el **Programa Municipal de Formación Tecnológica** de Alderetes, Tucumán.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Arquitectura y Stack Técnico
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router) para máxima velocidad y SEO.
+- **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) con arquitectura centralizada en `globals.css`.
+- **Base de Datos:** [Supabase](https://supabase.com/) (PostgreSQL) para manejo de inscriptos en tiempo real.
+- **Animaciones:** Intersection Observer API para efectos de _Scroll Reveal_ y CSS puro para efectos de terminal _retro-futurista_.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Características Principales
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **UI Consistente:** Grilla técnica infinita y línea de escaneo láser que acompaña el scroll.
+- **Glassmorphism:** Tarjetas con efecto de desenfoque de fondo y bordes animados.
+- **Dashboard Admin:** Panel privado protegido por variables de entorno para gestión de alumnos.
+- **Responsive Design:** Adaptado para móviles y desktop con tipografía fluida.
 
-## Learn More
+## 📖 De la Idea al Código (Aprendizajes)
 
-To learn more about Next.js, take a look at the following resources:
+Este repositorio documenta el proceso de refactorización desde un archivo único a una **arquitectura de componentes**, aplicando buenas prácticas como:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Principio de Responsabilidad Única:** Separación de estilos globalizados y lógica de componentes.
+2. **Optimización de Performance:** Uso estratégico de Server y Client Components.
+3. **Seguridad:** Gestión de credenciales mediante variables de entorno (.env).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Desarrollado por el Prof. Carlos M. Núñez en colaboración con Mentores IA._
